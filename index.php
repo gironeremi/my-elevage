@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 use App\Controller\Controller;
 use App\Controller\ErrorsController;
 use App\Controller\UsersController;
-use \App\Controller\AdminController;
+use App\Controller\AdminController;
 $action = "";
 $controller = new Controller();
 $usersController = new UsersController();
