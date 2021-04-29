@@ -1,7 +1,6 @@
 <?php
 namespace App\Controller;
-use App\Model\GamesManager;
-
+use App\Model\AnimalsManager;
 class Controller
 {
     public function cleanVar($str)
@@ -14,6 +13,9 @@ class Controller
     }
     public function home()
     {
+        $animalsManager = new AnimalsManager();
+        $animals = $animalsManager->listAnimals();
+        $animalsNames = array_column($animals,"nom");
         require('View/homeView.php');
     }
 }
